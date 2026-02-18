@@ -1,4 +1,10 @@
 package cuentas;
+/**
+ * Clase CCuenta
+ * Representa una cuenta bancaria.
+ * Permite ingresar, retirar y consultar saldo.
+ * @author Alvaro
+ */
 
 public class CCuenta {
 
@@ -18,11 +24,20 @@ public class CCuenta {
         cuenta=cue;
         saldo=sal;
     }
+/**
+ * Devuelve el saldo actual de la cuenta
+ * @return saldo disponible
+ */
 
     public double estado()
     {
         return saldo;
     }
+/**
+ * Ingresa dinero en la cuenta
+ * @param cantidad importe a ingresar
+ * @throws Exception si la cantidad es negativa
+ */
 
     public void ingresar(double cantidad) throws Exception
     {
@@ -30,6 +45,11 @@ public class CCuenta {
             throw new Exception("No se puede ingresar una cantidad negativa");
         saldo = saldo + cantidad;
     }
+/**
+ * Retira dinero de la cuenta
+ * @param cantidad importe a retirar
+ * @throws Exception si no hay saldo suficiente
+ */
 
     public void retirar(double cantidad) throws Exception
     {
